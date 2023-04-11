@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # localhost:8080/testGet?name=zhangsan&age=20
 @functions_framework.http
-@app.route("/testGet", method=["GET"])
+@app.route("/testGet")
 def hello_get(request):
     name = request.args.get("name")
     age = request.args.get("age")
@@ -20,7 +20,7 @@ localhost:8080/testPost
     }
 '''
 @functions_framework.http
-@app.route("/testPost", methods=["POST"])
+@app.route("/testPost")
 def hello_post(request):
     data = request.json
     name = data["name"]
