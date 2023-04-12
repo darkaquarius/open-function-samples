@@ -9,7 +9,7 @@ app = Flask(__name__)
 def hello_get(request):
     name = request.args.get("name")
     age = request.args.get("age")
-    return name + ":" + age
+    return name + ":*** " + age
 
 #
 '''
